@@ -1,0 +1,28 @@
+// settings
+@import "./settings/colors.scss";
+@import "./settings/font-sizes.scss";
+// Components import
+@import "./components/nav.scss";
+@import "./components/body.scss";
+@import "./components/feedback.scss";
+
+// style.scss is de file die alles gaat binnen trekken
+
+//
+// %extendName {}
+// To use it in component @extend extendNames
+
+// %banner {
+//     background-color: red;
+//     color: black;
+//     padding: 20px;
+// }
+
+// #banner1 {
+//     @extend banner;
+// }
+
+// #banner2 {
+//     @extend banner;
+// }
+

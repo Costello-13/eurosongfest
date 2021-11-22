@@ -1,0 +1,21 @@
+.c-nav{
+    background-color: $primary-grey ;
+    color: $primary-black;
+
+    // child gaan toevoegen in een parent --> gaat alleen in scss 
+    .c-nav-list{
+        list-style: none;
+        // parent gaan bepalen hoe de children ten opzichten van elkaar zich gaan gedragen
+        display: flex;
+
+        // nog een child erin steken
+        .c-nav-list-item{
+            padding: 10px;
+
+            &:hover{
+                background-color: $primary-white;
+                cursor: pointer;
+            }
+        }
+    }
+}
