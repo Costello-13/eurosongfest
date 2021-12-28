@@ -40,9 +40,10 @@ table, th, td {
     border-collapse: collapse;
 };
 
-#points {
-    text-align: right;
+#points, #spotifylink, #place {
+    text-align: center;
 };
+
 
 .homebuttons, .rankingbuttons {
     font-size: 30px;
@@ -57,4 +58,26 @@ table, th, td {
     
     text-align: center;
 }
+
+.places {
+    position: absolute;
+    font-size: 25px;
+    justify-content: space-evenly;
+}
+#firstplace {
+    top: 500px;
+    left: 600px;
+}
+#secondplace {
+    top: 500px;
+    left: 300px;
+
+}
+
+#thirdplace {
+    top: 500px;
+    left: 820px;
+}
+
+
 

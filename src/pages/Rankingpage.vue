@@ -8,6 +8,10 @@
       </h1>
       <div>
           <img id="podium" :src="image"/>
+          <span v-for="(song,index) in SortonPoints(songs).slice(0,1)" :key="index" id="firstplace" class="places"> {{song.title}}  </span>
+          <span v-for="(song,index) in SortonPoints(songs).slice(1,2)" :key="index" id="secondplace" class="places"> {{song.title}} </span>
+          <span v-for="(song,index) in SortonPoints(songs).slice(2,3)" :key="index" id="thirdplace" class="places"> {{song.title}} </span>
+
       </div>
       <div id="leaderbutton">
           <button class="rankingbuttons" @click="goToPage('Leaderboard')"> 

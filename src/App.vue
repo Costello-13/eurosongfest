@@ -35,6 +35,10 @@ import Homepage from "./pages/Homepage.vue"
 import Gamepage from "./pages/Gamepage.vue"
 import Rankingpage from "./pages/Rankingpage.vue"
 import Leaderboard from "./pages/Leaderboard.vue"
+
+// components
+import Googlechart from "./components/Googlechart.vue"
+
 // App Component
 export default {
   name: 'App',
@@ -42,7 +46,8 @@ export default {
     Homepage,
     Gamepage,
     Rankingpage,
-    Leaderboard
+    Leaderboard,
+    Googlechart
   }, 
 
   data (){

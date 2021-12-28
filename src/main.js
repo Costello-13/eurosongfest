@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Googlechart from './components/Googlechart.vue'
 
 Vue.config.productionTip = false
 

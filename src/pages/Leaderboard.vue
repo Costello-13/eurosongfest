@@ -21,9 +21,12 @@
                 <th>
                    Points
                 </th>
+                <th>
+                    Spotify
+                </th>
                </tr>
                <tr>
-                <td>
+                <td id="place">
                     <div v-for="(song,index) in SortonPoints(songs)" :key="index">
                         {{index + 1}}
                     </div>
@@ -43,20 +46,34 @@
                         {{song.points}}
                     </div>
                 </td>
+                <td id="spotifylink"> 
+                    <div v-for="(song,index) in SortonPoints(songs)" :key="index">
+                       <a :href="song.spotify">
+                           Click here 
+                       </a>
+                    </div>
+                </td>
                </tr>
            </table>
         </div>
+        <Googlechart
+            :graphData="graphData"
+        />
+
     </div>
 </template>
 
 <script>
-
-
+import Googlechart from "../components/Googlechart.vue"
 export default {
     name: 'Leaderboard',
+    components: {
+        Googlechart
+    },
     data(){
         return{
-            songs: []
+            songs: [],
+            graphData: [["Title", "Points"]],
         };
     },
 
@@ -129,14 +146,17 @@ export default {
                 })
                 .then((points)=>{
                     song.points= points;
+
+                    var graph_stuff = [song.title, song.points];
+                    this.graphData.push(graph_stuff);
                 })
 
                 return song;
+                
             })
 
             // change data of songs, so everything will get rerenderd
             this.songs = songs;
-        
         }, 
 
         SortonPoints(songs) { 
