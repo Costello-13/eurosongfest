@@ -9,46 +9,46 @@
         <div id="rankingtable">
            <table>
                <tr>
-                <th>
+                <th class="headrow">
                     Place
                 </th>
-                <th>
+                <th class="headrow">
                    Artist
                 </th>
-                <th>
+                <th class="headrow">
                    Title 
                 </th>
-                <th>
+                <th class="headrow">
                    Points
                 </th>
-                <th>
+                <th class="headrow">
                     Spotify
                 </th>
                </tr>
                <tr>
-                <td id="place">
+                <td id="place" class="headrow">
                     <div v-for="(song,index) in SortonPoints(songs)" :key="index">
                         {{index + 1}}
                     </div>
                 </td>
-                <td>
+                <td class="headrow">
                     <div v-for="(song,index) in SortonPoints(songs)" :key="index">
                         {{song.artist}}
                     </div>
                 </td>
-                <td>
+                <td class="headrow">
                     <div v-for="(song,index) in SortonPoints(songs)" :key="index">
                        {{song.title}}
                     </div>
                 </td>
-                <td id=points>
+                <td id=points class="headrow">
                     <div v-for="(song,index) in SortonPoints(songs)" :key="index">
                         {{song.points}}
                     </div>
                 </td>
-                <td id="spotifylink"> 
+                <td id="spotifylink" class="headrow"> 
                     <div v-for="(song,index) in SortonPoints(songs)" :key="index">
-                       <a :href="song.spotify">
+                       <a :href="song.spotify" id="link">
                            Click here 
                        </a>
                     </div>
@@ -56,10 +56,10 @@
                </tr>
            </table>
         </div>
+        
         <Googlechart
             :graphData="graphData"
         />
-
     </div>
 </template>
 

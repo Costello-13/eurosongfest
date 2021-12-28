@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h3>
-      Visualisation 
-    </h3>
+ 
     <GChart
       type="BarChart"
       :data="graphData"
@@ -23,9 +21,27 @@ export default {
   },
   data() {
     return {
-      chartOptions: {
-        width: auto
-      }
+      chartOptions:{
+
+                height:600,
+                width: 1300,
+                fontSize: 13,
+                backgroundColor: "151B26",
+                titleTextStyle: { color: "#ebebeb", fontSize: '20'},
+                colors: ['#886BF2'],
+                bar: { groupWidth: "40%" },
+                hAxis:{
+                    title: 'Points',
+                    titleColor: "ebebeb",
+                    textColor: "525252"
+                },
+                vAxis: {
+                 textColor: "ebebeb"
+                },
+                legend:{
+                    position: 'none'
+                },
+      },
     };
   }
 };
