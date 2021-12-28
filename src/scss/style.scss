@@ -1,10 +1,11 @@
-// settings
+// Settings
 @import "./settings/colors.scss";
 @import "./settings/font-sizes.scss";
-// Components import
-@import "./components/nav.scss";
+
+// Components
 @import "./components/body.scss";
 @import "./components/feedback.scss";
+@import "./components/nav.scss";
 
 // style.scss is de file die alles gaat binnen trekken
 

@@ -1,6 +1,6 @@
 .c-nav{
-    background-color: $primary-grey ;
-    color: $primary-black;
+    background-color: $primary-blue ;
+    color: $primary-lightpurple;
 
     // child gaan toevoegen in een parent --> gaat alleen in scss 
     .c-nav-list{
@@ -13,7 +13,7 @@
             padding: 10px;
 
             &:hover{
-                background-color: $primary-white;
+                background-color: $primary-lightpurple;
                 cursor: pointer;
             }
         }
